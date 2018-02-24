@@ -1,0 +1,22 @@
+{
+  "name": "pasta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_PATH=./dist node ./dist/server.js",
+    "watch": "babel src -d dist --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "fs": "0.0.1-security",
+    "hapi": "^17.2.0",
+    "joi": "^13.1.2",
+    "path": "^0.12.7",
+    "underscore": "^1.8.3"
+  }
+}
