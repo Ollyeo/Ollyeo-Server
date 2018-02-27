@@ -1,5 +1,5 @@
-import loginController from 'controllers/login';
-import loginValidate from 'validate/login';
+import * as loginController from 'controllers/login';
+import * as loginValidate from 'validate/login';
 
 export default function() {
 	return [
@@ -8,7 +8,7 @@ export default function() {
 			path: '/login',
 			options: {
 				handler: loginController.login,
-				validate: loginValidate.login(),
+				validate: loginValidate.login,
 			},
 		},
 		{

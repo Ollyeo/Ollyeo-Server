@@ -1,7 +1,8 @@
+const User = require('../models/user').User;
+const Boom = require('boom');
 
-export default class LoginController {
-	static login(request, h) {
-		// TODO: Implement
+export function login(request, h) {
+    		// TODO: Implement
 		const id = 'test';
 		const pw = 'test';
 		
@@ -13,5 +14,4 @@ export default class LoginController {
 		return { 
 			ok: res,
 		};
-	}
 }

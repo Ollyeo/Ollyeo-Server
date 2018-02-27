@@ -1,10 +1,10 @@
 import Joi from "joi";
 
 module.exports = {
-	login,
+	create,
 };
 
-const login = {
+const create = {
 	payload: {
 		email: Joi.string().required(),
 		password: Joi.string().required(),

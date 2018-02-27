@@ -3,35 +3,22 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.login = login;
+var User = require('../models/user').User;
+var Boom = require('boom');
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+function login(request, h) {
+	// TODO: Implement
+	var id = 'test';
+	var pw = 'test';
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	var rId = request.payload.id;
+	var rPw = request.payload.password;
 
-var LoginController = function () {
-	function LoginController() {
-		_classCallCheck(this, LoginController);
-	}
+	var res = id === rId && pw === rPw;
 
-	_createClass(LoginController, null, [{
-		key: 'login',
-		value: function login(request, h) {
-			// TODO: Implement
-			var id = 'test';
-			var pw = 'test';
-
-			var rId = request.payload.id;
-			var rPw = request.payload.password;
-
-			var res = id === rId && pw === rPw;
-
-			return {
-				ok: res
-			};
-		}
-	}]);
-
-	return LoginController;
-}();
-
-exports.default = LoginController;
+	return {
+		ok: res
+	};
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb250cm9sbGVycy9sb2dpbi5qcyJdLCJuYW1lcyI6WyJsb2dpbiIsIlVzZXIiLCJyZXF1aXJlIiwiQm9vbSIsInJlcXVlc3QiLCJoIiwiaWQiLCJwdyIsInJJZCIsInBheWxvYWQiLCJyUHciLCJwYXNzd29yZCIsInJlcyIsIm9rIl0sIm1hcHBpbmdzIjoiOzs7OztRQUdnQkEsSyxHQUFBQSxLO0FBSGhCLElBQU1DLE9BQU9DLFFBQVEsZ0JBQVIsRUFBMEJELElBQXZDO0FBQ0EsSUFBTUUsT0FBT0QsUUFBUSxNQUFSLENBQWI7O0FBRU8sU0FBU0YsS0FBVCxDQUFlSSxPQUFmLEVBQXdCQyxDQUF4QixFQUEyQjtBQUM1QjtBQUNKLEtBQU1DLEtBQUssTUFBWDtBQUNBLEtBQU1DLEtBQUssTUFBWDs7QUFFQSxLQUFNQyxNQUFNSixRQUFRSyxPQUFSLENBQWdCSCxFQUE1QjtBQUNBLEtBQU1JLE1BQU1OLFFBQVFLLE9BQVIsQ0FBZ0JFLFFBQTVCOztBQUVBLEtBQU1DLE1BQU9OLE9BQU9FLEdBQVIsSUFBaUJELE9BQU9HLEdBQXBDOztBQUVBLFFBQU87QUFDTkcsTUFBSUQ7QUFERSxFQUFQO0FBR0QiLCJmaWxlIjoibG9naW4uanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBVc2VyID0gcmVxdWlyZSgnLi4vbW9kZWxzL3VzZXInKS5Vc2VyO1xuY29uc3QgQm9vbSA9IHJlcXVpcmUoJ2Jvb20nKTtcblxuZXhwb3J0IGZ1bmN0aW9uIGxvZ2luKHJlcXVlc3QsIGgpIHtcbiAgICBcdFx0Ly8gVE9ETzogSW1wbGVtZW50XG5cdFx0Y29uc3QgaWQgPSAndGVzdCc7XG5cdFx0Y29uc3QgcHcgPSAndGVzdCc7XG5cdFx0XG5cdFx0Y29uc3QgcklkID0gcmVxdWVzdC5wYXlsb2FkLmlkO1xuXHRcdGNvbnN0IHJQdyA9IHJlcXVlc3QucGF5bG9hZC5wYXNzd29yZDtcblx0XHRcblx0XHRjb25zdCByZXMgPSAoaWQgPT09IHJJZCkgJiYgKHB3ID09PSByUHcpO1xuXHRcdFxuXHRcdHJldHVybiB7IFxuXHRcdFx0b2s6IHJlcyxcblx0XHR9O1xufVxuIl19
