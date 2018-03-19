@@ -1,12 +1,14 @@
 import Joi from "joi";
 
 module.exports = {
-	login,
+	login: login()
 };
 
-const login = {
-	payload: {
-		email: Joi.string().required(),
-		password: Joi.string().required(),
-	}
+function login() {
+	return {
+		payload: {
+			email: Joi.string().required(),
+			password: Joi.string().required(),
+		}
+	};
 }
